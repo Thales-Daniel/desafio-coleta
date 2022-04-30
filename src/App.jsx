@@ -1,9 +1,11 @@
 import './App.css';
+import React from 'react';
+import Form from './components/form';
 
 function App() {
   return (
     <div className="App">
-      teste
+      <Form />
     </div>
   );
 }
