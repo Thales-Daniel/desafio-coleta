@@ -2,7 +2,7 @@ import React from 'react';
 
 function InputRadio() {
   return (
-    <div>
+    <div className="buttonContainer">
       <div>
         <p>
           Você se considera bom em lógica?

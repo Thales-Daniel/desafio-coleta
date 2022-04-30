@@ -1,13 +1,14 @@
 import React from 'react';
+import './style.css';
 
 function Select() {
   return (
-    <div className="campo">
+    <div className="selectCampo">
       <p>
         Gostaria de fazer parte da GRX?
       </p>
       <label htmlFor="respostasSelect">
-        <select id="respostasSelect" required defaultValue="default">
+        <select id="respostasSelect" defaultValue="default">
           <option value="default" id="default" disabled>Selecione</option>
           <option>Sim</option>
           <option>Não</option>

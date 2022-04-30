@@ -1,0 +1,13 @@
+.selectCampo {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.selectCampo  > label > select {
+  width: 100%;
+  height: 35px;
+  padding: 0 5px;
+  border-radius: 5px;
+  outline: none;
+}
