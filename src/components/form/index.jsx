@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import InputRadio from '../input';
 import Select from '../select';
 import TextArea from '../textArea';
+import './style.css';
 
 function Form() {
   const [caracter, setCaracter] = useState({ valor: '', tamanho: 0 });

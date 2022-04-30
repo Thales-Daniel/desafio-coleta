@@ -4,12 +4,16 @@ function InputRadio() {
   return (
     <div>
       <div>
-        Você se considera bom em lógica?
+        <p>
+          Você se considera bom em lógica?
+        </p>
         <button type="button">Sim</button>
         <button type="button">Não</button>
       </div>
       <div>
-        gosta de aprender com desafios?
+        <p>
+          gosta de aprender com desafios?
+        </p>
         <button type="button">Sim</button>
         <button type="button">Não</button>
       </div>

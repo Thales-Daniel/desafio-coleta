@@ -3,7 +3,9 @@ import React from 'react';
 function Select() {
   return (
     <div className="campo">
-      Gostaria de fazer parte da GRX?
+      <p>
+        Gostaria de fazer parte da GRX?
+      </p>
       <label htmlFor="respostasSelect">
         <select id="respostasSelect" required defaultValue="default">
           <option value="default" id="default" disabled>Selecione</option>

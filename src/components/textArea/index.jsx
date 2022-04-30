@@ -9,8 +9,10 @@ function TextArea({ caracter, setCaracter }) {
 
   return (
     <div>
-      <label htmlFor="textarea">
+      <p>
         Por favor, justifique a sua resposta anterior
+      </p>
+      <label htmlFor="textarea">
         <textarea
           id="textarea"
           name="w3review"
