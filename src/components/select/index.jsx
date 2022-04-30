@@ -1,11 +1,20 @@
 import React from 'react';
 
-function select() {
+function Select() {
   return (
-    <div>
-      teste
+    <div className="campo">
+      Gostaria de fazer parte da GRX?
+      <label htmlFor="respostasSelect">
+        <select id="respostasSelect" required>
+          <option selected disabled value="">Selecione</option>
+          <option>Sim</option>
+          <option>Não</option>
+          <option>Não sei</option>
+          <option>Agora!!</option>
+        </select>
+      </label>
     </div>
   );
 }
 
-export default select;
+export default Select;
