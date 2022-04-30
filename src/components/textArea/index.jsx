@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function TextArea() {
-  const [caracter, setCaracter] = useState(0);
-
+function TextArea({ caracter, setCaracter }) {
   const contador = (e) => {
-    const value = e.target.value.length;
-    setCaracter(value);
+    const { value } = e.target;
+    setCaracter({ value, tamanho: value.length });
   };
 
   return (
@@ -18,15 +17,20 @@ function TextArea() {
           rows="4"
           cols="50"
           placeholder="Digite sua resposta aqui"
-          className={caracter < 15 ? 'minimun' : 'maximun'}
+          className={caracter.tamanho < 15 ? 'minimun' : 'maximun'}
           onChange={(e) => contador(e)}
         />
       </label>
       <small>
-        {caracter}
+        {caracter.tamanho}
       </small>
     </div>
   );
 }
+
+TextArea.propTypes = {
+  caracter: PropTypes.object,
+  setCaracter: PropTypes.func,
+}.isRequired;
 
 export default TextArea;
