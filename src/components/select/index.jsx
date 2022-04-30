@@ -4,7 +4,7 @@ import './style.css';
 function Select() {
   return (
     <div className="selectCampo">
-      <p>
+      <p className="titleSelect">
         Gostaria de fazer parte da GRX?
       </p>
       <label htmlFor="respostasSelect">
