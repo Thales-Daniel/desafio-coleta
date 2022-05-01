@@ -6,42 +6,32 @@ import PropTypes from 'prop-types';
 export const StateContext = createContext({});
 
 export function StateProvider(props) {
-  const [Pergunta1, setPergunta1] = useState('');
-  const [Pergunta2, setPergunta2] = useState('');
-  const [Pergunta3, setPergunta3] = useState('');
-  const [Pergunta4, setPergunta4] = useState('');
-  // const [verificaPerguntas, setVerificaPerguntas] = useState(true);
+  const [campos, setCampos] = useState({
+    Pergunta1: '',
+    Pergunta2: '',
+    Pergunta3: '',
+    Pergunta4: '',
+  });
 
-  const obj = {
-    Pergunta1,
-    Pergunta2,
-    Pergunta3,
-    Pergunta4,
-  };
-
-  useEffect(() => {
-    // const verificador = Boolean(Pergunta1 && Pergunta2 && Pergunta3 && Pergunta4);
-
-    // if (verificador === true) {
-    //   setVerificaPerguntas(false);
-    // } else {
-    //   setVerificaPerguntas(true);
-    // }
-  }, [obj, Pergunta1, Pergunta2, Pergunta3, Pergunta4]);
+  const [verificaCampos, setVerificaCampos] = useState({
+    Pergunta1: false,
+    Pergunta2: false,
+    Pergunta3: false,
+    Pergunta4: false,
+  });
 
   const context = useMemo(
     () => ({
-      setPergunta1,
-      setPergunta2,
-      setPergunta3,
-      setPergunta4,
-      Pergunta4,
-      Pergunta3,
-      Pergunta2,
-      Pergunta1,
+      campos,
+      setCampos,
+      verificaCampos,
+      setVerificaCampos,
     }),
-    [setPergunta1, setPergunta2, setPergunta3, setPergunta4],
+    [campos, setCampos, verificaCampos, setVerificaCampos],
   );
+
+  useEffect(() => {
+  }, [context, campos]);
 
   const { children } = props;
 

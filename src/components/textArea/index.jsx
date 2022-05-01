@@ -4,13 +4,16 @@ import { StateContext } from '../../context/StateProvider';
 import './style.css';
 
 function TextArea() {
-  const { setPergunta4, Pergunta4 } = useContext(StateContext);
+  const { setCampos, setVerificaCampos } = useContext(StateContext);
   const [tamanho, setTamanho] = useState(0);
   const [valor, setValor] = useState('');
 
   useEffect(() => {
-    setPergunta4(valor);
-  }, [valor, setPergunta4]);
+    setCampos((prevState) => ({ ...prevState, Pergunta4: valor }));
+    if (tamanho >= 15 && tamanho <= 200) {
+      setVerificaCampos(true);
+    }
+  }, [valor, setCampos]);
 
   const contador = (e) => {
     const { value } = e.target;
@@ -27,7 +30,9 @@ function TextArea() {
         <textarea
           id="textarea"
           placeholder="Digite sua resposta aqui"
-          className={Pergunta4 < 15 ? 'minimun' : 'maximun'}
+          // className={Pergunta4 < 15 ? 'minimun' : 'maximun'}
+          minLength={15}
+          maxLength={200}
           onChange={(e) => contador(e)}
         />
       </label>
