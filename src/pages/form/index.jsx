@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import InputRadio from '../buttons';
-import Select from '../select';
-import TextArea from '../textArea';
+import InputRadio from '../../components/buttons';
+import Select from '../../components/select';
+import TextArea from '../../components/textArea';
 import './style.css';
 
 function Form() {

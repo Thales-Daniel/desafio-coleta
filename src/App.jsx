@@ -1,11 +1,16 @@
 import './App.css';
 import React from 'react';
-import Form from './components/form';
+import { Routes, Route } from 'react-router-dom';
+import Form from './pages/form';
+import Detalhes from './pages/detalhes';
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <Routes>
+        <Route path="/" element={<Form />} />
+        <Route path="/:pokemonName" element={<Detalhes />} />
+      </Routes>
     </div>
   );
 }
