@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './style.css';
 
 function TextArea({ caracter, setCaracter }) {
   const contador = (e) => {
@@ -8,16 +9,13 @@ function TextArea({ caracter, setCaracter }) {
   };
 
   return (
-    <div>
+    <div className="textAreaContainer">
       <p>
         Por favor, justifique a sua resposta anterior
       </p>
-      <label htmlFor="textarea">
+      <label htmlFor="textarea" className="textLabel">
         <textarea
           id="textarea"
-          name="w3review"
-          rows="4"
-          cols="50"
           placeholder="Digite sua resposta aqui"
           className={caracter.tamanho < 15 ? 'minimun' : 'maximun'}
           onChange={(e) => contador(e)}
@@ -25,6 +23,7 @@ function TextArea({ caracter, setCaracter }) {
       </label>
       <small>
         {caracter.tamanho}
+        /200
       </small>
     </div>
   );

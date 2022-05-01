@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function InputRadio() {
+function Buttons() {
   return (
     <div className="buttonContainer">
       <p>
@@ -22,4 +22,4 @@ function InputRadio() {
   );
 }
 
-export default InputRadio;
+export default Buttons;

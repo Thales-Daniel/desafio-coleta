@@ -9,5 +9,13 @@
 
 .divButtons {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  gap: 10px;
+}
+
+.divButtons > button { 
+  width: 70%;
+  height: 45px;
+  border-radius: 6px;
 }
