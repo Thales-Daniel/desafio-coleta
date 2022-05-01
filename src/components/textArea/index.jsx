@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { StateContext } from '../../context/StateProvider';
 import './style.css';
 
-function TextArea({ caracter, setCaracter }) {
+function TextArea() {
+  const { setPergunta4, pergunta4 } = useContext(StateContext);
   const contador = (e) => {
     const { value } = e.target;
-    setCaracter({ value, tamanho: value.length });
+    setPergunta4({ value, tamanho: value.length });
   };
 
   return (
@@ -17,12 +19,12 @@ function TextArea({ caracter, setCaracter }) {
         <textarea
           id="textarea"
           placeholder="Digite sua resposta aqui"
-          className={caracter.tamanho < 15 ? 'minimun' : 'maximun'}
+          className={pergunta4.tamanho < 15 ? 'minimun' : 'maximun'}
           onChange={(e) => contador(e)}
         />
       </label>
       <small>
-        {caracter.tamanho}
+        {pergunta4.tamanho}
         /200
       </small>
     </div>
@@ -30,8 +32,8 @@ function TextArea({ caracter, setCaracter }) {
 }
 
 TextArea.propTypes = {
-  caracter: PropTypes.object,
-  setCaracter: PropTypes.func,
+  pergunta4: PropTypes.object,
+  setPergunta4: PropTypes.func,
 }.isRequired;
 
 export default TextArea;
