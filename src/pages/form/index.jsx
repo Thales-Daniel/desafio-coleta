@@ -12,7 +12,6 @@ function Form() {
       <Select />
       <TextArea />
       <button type="submit" className="submitButton">Enviar</button>
-      {/* disabled={!(caracter.tamanho >= 15 && caracter.tamanho <= 200)} */}
     </form>
   );
 }

@@ -1,5 +1,5 @@
 import React, {
-  createContext, useMemo, useState,
+  createContext, useEffect, useMemo, useState,
 } from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,6 +10,24 @@ export function StateProvider(props) {
   const [Pergunta2, setPergunta2] = useState('');
   const [Pergunta3, setPergunta3] = useState('');
   const [Pergunta4, setPergunta4] = useState('');
+  // const [verificaPerguntas, setVerificaPerguntas] = useState(true);
+
+  const obj = {
+    Pergunta1,
+    Pergunta2,
+    Pergunta3,
+    Pergunta4,
+  };
+
+  useEffect(() => {
+    // const verificador = Boolean(Pergunta1 && Pergunta2 && Pergunta3 && Pergunta4);
+
+    // if (verificador === true) {
+    //   setVerificaPerguntas(false);
+    // } else {
+    //   setVerificaPerguntas(true);
+    // }
+  }, [obj, Pergunta1, Pergunta2, Pergunta3, Pergunta4]);
 
   const context = useMemo(
     () => ({
