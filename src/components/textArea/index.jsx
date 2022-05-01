@@ -1,13 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { StateContext } from '../../context/StateProvider';
 import './style.css';
 
 function TextArea() {
-  const { setPergunta4, pergunta4 } = useContext(StateContext);
+  const { setPergunta4, Pergunta4 } = useContext(StateContext);
+  const [tamanho, setTamanho] = useState(0);
+  const [valor, setValor] = useState('');
+
+  useEffect(() => {
+    setPergunta4(valor);
+  }, [valor, setPergunta4]);
+
   const contador = (e) => {
     const { value } = e.target;
-    setPergunta4({ value, tamanho: value.length });
+    setValor(value);
+    setTamanho(value.length);
   };
 
   return (
@@ -19,12 +27,12 @@ function TextArea() {
         <textarea
           id="textarea"
           placeholder="Digite sua resposta aqui"
-          className={pergunta4.tamanho < 15 ? 'minimun' : 'maximun'}
+          className={Pergunta4 < 15 ? 'minimun' : 'maximun'}
           onChange={(e) => contador(e)}
         />
       </label>
       <small>
-        {pergunta4.tamanho}
+        {tamanho}
         /200
       </small>
     </div>

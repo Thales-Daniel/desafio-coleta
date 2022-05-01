@@ -1,4 +1,6 @@
-import React, { createContext, useMemo, useState } from 'react';
+import React, {
+  createContext, useMemo, useState,
+} from 'react';
 import PropTypes from 'prop-types';
 
 export const StateContext = createContext({});
@@ -7,7 +9,7 @@ export function StateProvider(props) {
   const [Pergunta1, setPergunta1] = useState('');
   const [Pergunta2, setPergunta2] = useState('');
   const [Pergunta3, setPergunta3] = useState('');
-  const [Pergunta4, setPergunta4] = useState({});
+  const [Pergunta4, setPergunta4] = useState('');
 
   const context = useMemo(
     () => ({
