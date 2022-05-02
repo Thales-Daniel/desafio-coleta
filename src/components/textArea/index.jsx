@@ -38,7 +38,7 @@ function TextArea() {
           onChange={(e) => contador(e)}
         />
       </label>
-      <small>
+      <small className="contador">
         {tamanho}
         /200
       </small>

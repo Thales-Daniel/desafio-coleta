@@ -8,11 +8,23 @@ import './style.css';
 
 function Form() {
   const [redireciona, setRediciona] = useState(false);
-  const { verificaCampos } = useContext(StateContext);
+  const { verificaCampos, setCampos, setVerificaCampos } = useContext(StateContext);
   const navigate = useNavigate();
 
   const Submit = (e) => {
     e.preventDefault();
+    setCampos({
+      Pergunta1: '',
+      Pergunta2: '',
+      Pergunta3: '',
+      Pergunta4: '',
+    });
+    setVerificaCampos({
+      Pergunta1: false,
+      Pergunta2: false,
+      Pergunta3: false,
+      Pergunta4: false,
+    });
     setRediciona(true);
   };
 
