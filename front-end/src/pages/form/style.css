@@ -1,0 +1,45 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  width: 500px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 50px 45px 50px;
+}
+
+p {
+  font-size: large;
+}
+
+.submitButton {
+  font-size: large;
+  width: 70%;
+  height: 45px;
+  border-radius: 8px;
+  background-color: #338CEF;
+  color: #fff;
+  border: none;
+}
+
+.submitButton:disabled {
+  background-color: #338bef3f;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .form {
+    width: 90%;
+    padding: 10px;
+  }
+
+  p {
+    font-size: medium;
+  }
+  
+  h1 {
+    font-size: larger;
+  }
+}
