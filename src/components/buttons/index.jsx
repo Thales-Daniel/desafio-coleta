@@ -7,9 +7,7 @@ function Buttons() {
     campos, setCampos, setVerificaCampos,
   } = useContext(StateContext);
 
-  useEffect(() => {
-    console.log(campos);
-  }, [campos]);
+  useEffect(() => {}, [campos]);
 
   return (
     <div className="buttonContainer">
@@ -19,6 +17,7 @@ function Buttons() {
       <div className="divButtons">
         <button
           type="button"
+          className={campos.Pergunta1 === 'Sim' ? 'botaoSim' : 'botaoComponent'}
           onClick={() => {
             setCampos((prevState) => ({ ...prevState, Pergunta1: 'Sim' }));
             setVerificaCampos((prevState) => ({ ...prevState, Pergunta1: true }));
@@ -28,6 +27,7 @@ function Buttons() {
 
         </button>
         <button
+          className={campos.Pergunta1 === 'Não' ? 'botaoNao' : 'botaoComponent'}
           type="button"
           onClick={() => {
             setCampos((prevState) => ({ ...prevState, Pergunta1: 'Não' }));
@@ -44,6 +44,7 @@ function Buttons() {
       <div className="divButtons">
         <button
           type="button"
+          className={campos.Pergunta2 === 'Sim' ? 'botaoSim' : 'botaoComponent'}
           onClick={() => {
             setCampos((prevState) => ({ ...prevState, Pergunta2: 'Sim' }));
             setVerificaCampos((prevState) => ({ ...prevState, Pergunta2: true }));
@@ -54,6 +55,7 @@ function Buttons() {
         </button>
         <button
           type="button"
+          className={campos.Pergunta2 === 'Não' ? 'botaoNao' : 'botaoComponent'}
           onClick={() => {
             setCampos((prevState) => ({ ...prevState, Pergunta2: 'Não' }));
             setVerificaCampos((prevState) => ({ ...prevState, Pergunta2: true }));

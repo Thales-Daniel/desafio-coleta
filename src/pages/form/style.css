@@ -15,6 +15,7 @@ p {
 }
 
 .submitButton {
+  font-size: large;
   width: 70%;
   height: 45px;
   border-radius: 8px;

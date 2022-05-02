@@ -11,7 +11,9 @@ function TextArea() {
   useEffect(() => {
     setCampos((prevState) => ({ ...prevState, Pergunta4: valor }));
     if (tamanho >= 15 && tamanho <= 200) {
-      setVerificaCampos(true);
+      setVerificaCampos((prevState) => ({ ...prevState, Pergunta4: true }));
+    } else {
+      setVerificaCampos((prevState) => ({ ...prevState, Pergunta4: false }));
     }
   }, [valor, setCampos]);
 
