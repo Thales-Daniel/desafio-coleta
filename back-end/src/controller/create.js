@@ -2,7 +2,9 @@ const postPerguntasServices = require('../services/create');
 
 const enviaPerguntas = async (req, res, next) => {
   try {
-    const perguntas = req.body;
+    const { perguntas } = req.body;
+
+    console.log(perguntas);
 
     const returnoService = await postPerguntasServices(perguntas);
 
