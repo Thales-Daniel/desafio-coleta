@@ -12,9 +12,10 @@ function Form() {
   const {
     verificaCampos, setCampos, setVerificaCampos, campos,
   } = useContext(StateContext);
+
   const navigate = useNavigate();
 
-  const Submit = () => {
+  const Submit = async () => {
     enviaRespostas(campos);
     setCampos({
       Pergunta1: '',

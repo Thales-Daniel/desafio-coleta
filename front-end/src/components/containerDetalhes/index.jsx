@@ -23,7 +23,7 @@ function ContainerDetalhes({ quantidade, mensagem, porcentagem }) {
         </p>
         <p className="containerMensagens">
           {' '}
-          {porcentagem}
+          {`%${porcentagem}`}
         </p>
       </div>
     </div>

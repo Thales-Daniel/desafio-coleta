@@ -39,14 +39,16 @@
 
 .tituloTotal {
   font-size: large;
-  color: #338CEF;
+  color: black;
   margin-top: 0;
   margin-bottom: 10px;
 }
 
 .quantidadeTotal {
-  background-color:  #338CEF;;
-  color: #fff;
+  border-radius: 10px;
+  border: solid gray 1px;
+  background-color: whitesmoke;
+  color: black;
   margin-top: 0;
   margin-bottom: 10px;
   display: flex;

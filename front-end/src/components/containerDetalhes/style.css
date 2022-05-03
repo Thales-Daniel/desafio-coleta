@@ -17,19 +17,21 @@
 }
 
 .containerMensagens {
-  background-color: #338CEF;
-  color: #fff;
-  font-size: x-large;
+  background-color: whitesmoke;
+  color: black;
+  border: solid gray 1px;
+  font-size: large;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   margin: 0;
+  border-radius: 10px;
 }
 
 .containerMensagensTitulo {
-  color: #338CEF;
+  color: black;
   font-size: large;
   margin-top: 0;
   margin-bottom: 10px;
