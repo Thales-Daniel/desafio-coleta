@@ -4,15 +4,18 @@ import Buttons from '../../components/buttons';
 import Select from '../../components/select';
 import TextArea from '../../components/textArea';
 import { StateContext } from '../../context/StateProvider';
+import enviaRespostas from '../../services/enviaPerguntas';
 import './style.css';
 
 function Form() {
   const [redireciona, setRediciona] = useState(false);
-  const { verificaCampos, setCampos, setVerificaCampos } = useContext(StateContext);
+  const {
+    verificaCampos, setCampos, setVerificaCampos, campos,
+  } = useContext(StateContext);
   const navigate = useNavigate();
 
-  const Submit = (e) => {
-    e.preventDefault();
+  const Submit = () => {
+    enviaRespostas(campos);
     setCampos({
       Pergunta1: '',
       Pergunta2: '',
@@ -25,6 +28,7 @@ function Form() {
       Pergunta3: false,
       Pergunta4: false,
     });
+
     setRediciona(true);
   };
 

@@ -1,15 +1,11 @@
-import React from 'react';
-import './style.css';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { StateContext } from '../../context/StateProvider';
+import './style.css';
 import ContainerDetalhes from '../../components/containerDetalhes';
 
 function Detalhes() {
-  const obj = {
-    total: 50,
-    mensagensPositivas: 40,
-    mensagensNegativas: 10,
-    quantidadeNaoAvaliada: 0,
-  };
+  const { data } = useContext(StateContext);
 
   return (
     <div className="containerDetalhes">
@@ -18,12 +14,12 @@ function Detalhes() {
           Total
         </p>
         <p className="quantidadeTotal">
-          {obj.total}
+          {data.total}
         </p>
       </div>
-      <ContainerDetalhes mensagem="Positiva" quantidade={obj.mensagensPositivas} porcentagem={80} />
-      <ContainerDetalhes mensagem="Negativa" quantidade={obj.mensagensNegativas} porcentagem={20} />
-      <ContainerDetalhes mensagem="Não Avaliada" quantidade={obj.quantidadeNaoAvaliada} porcentagem={0} />
+      <ContainerDetalhes mensagem="Positiva" quantidade={data.quantidadePositiva} porcentagem={data.porcentagemPositiva} />
+      <ContainerDetalhes mensagem="Negativa" quantidade={data.quantidadeNegativa} porcentagem={data.porcentagemNegativa} />
+      <ContainerDetalhes mensagem="Não Avaliada" quantidade={data.quantidadeNaoAvaliada} porcentagem={data.porcentagemNaoAvaliada} />
       <Link to="/" className="link">Voltar</Link>
     </div>
   );

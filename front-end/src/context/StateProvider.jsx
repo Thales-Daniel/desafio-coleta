@@ -1,7 +1,8 @@
 import React, {
-  createContext, useEffect, useMemo, useState,
+  createContext, useEffect, useMemo, useState, useCallback,
 } from 'react';
 import PropTypes from 'prop-types';
+import pegaRespostas from '../services/pegaRespostas';
 
 export const StateContext = createContext({});
 
@@ -20,18 +21,30 @@ export function StateProvider(props) {
     Pergunta4: false,
   });
 
+  const [data, setData] = useState({});
+
+  const respostas = useCallback(async () => {
+    const resolve = await pegaRespostas();
+    setData(resolve);
+  });
+
+  useEffect(() => {
+    respostas();
+  }, []);
+
   const context = useMemo(
     () => ({
       campos,
       setCampos,
       verificaCampos,
       setVerificaCampos,
+      data,
     }),
-    [campos, setCampos, verificaCampos, setVerificaCampos],
+    [campos, setCampos, verificaCampos, setVerificaCampos, data, respostas],
   );
 
   useEffect(() => {
-  }, [context, campos]);
+  }, [context, campos, data]);
 
   const { children } = props;
 
