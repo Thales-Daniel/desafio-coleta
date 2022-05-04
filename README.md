@@ -11,6 +11,7 @@ sera enviado para uma API que verifica-ra os dados e te retornara os detalhes de
 - [Tecnologias](#tecnologias)
 - [Executando o projeto](#executando-o-projeto)
 - [Proximos passos](#proximos-passos)
+- [Principal Desafio](#desafio-principal)
 - [Testes](#testes)
 
 <p>&nbsp</p>
@@ -76,7 +77,7 @@ O front-end do projeto foi desenvolvido em React.js com o gerenciador de estado 
   <br />
   
   O back-end do projeto foi desenvolvido em Node.js com Express, alem disso, foi
-  utilizado o Nodemon para o auxilio do desenvolvimento, .
+  utilizado o Nodemon para o auxilio do desenvolvimento.
 
 
   - `Node.js`
@@ -98,7 +99,7 @@ O front-end do projeto foi desenvolvido em React.js com o gerenciador de estado 
 # Executando o projeto
 
   Front-end
-
+Proximos passos
 ![NavegandoFront-end](https://user-images.githubusercontent.com/82240828/166749735-bcfabdf5-0b0e-4afd-958b-62a8bd3405a6.gif)
 
 
@@ -122,8 +123,12 @@ Foram desenvolvidos testes para o fron-end com o react-testing-library e jest, a
 ![Captura de tela de 2022-05-04 15-15-36](https://user-images.githubusercontent.com/82240828/166800011-6d2a8ba3-2113-41db-929a-8f98af5a349c.png)
 
 
-# Proximos passos
+<strong>Os testes do back-end se encontram em desenvolvimento<strong>
 
 
+# Desafio Principal
+  
+O principal desafio do projeto foi organizar por onde seria iniciado a produção, alem disso, houveram problemas na hora da estilização, que
+causou um atraso grande.
 
 <p>&nbsp</p>
