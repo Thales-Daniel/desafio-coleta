@@ -12,11 +12,11 @@ const pegaPerguntas = async () => {
 
   const total = quantidadeNaoAvaliada + quantidadeNegativa + quantidadePositiva;
 
-  const porcentagemPositiva = Math.floor((quantidadePositiva * 100) / total);
+  const porcentagemPositiva = ((quantidadePositiva * 100) / total).toFixed(2);
 
-  const porcentagemNegativa = Math.floor((quantidadeNegativa * 100) / total);
+  const porcentagemNegativa = ((quantidadeNegativa * 100) / total).toFixed(2);
 
-  const porcentagemNaoAvaliada = Math.floor((quantidadeNaoAvaliada * 100) / total);
+  const porcentagemNaoAvaliada = ((quantidadeNaoAvaliada * 100) / total).toFixed(2);
 
   const dataPerguntas = {
     total,
