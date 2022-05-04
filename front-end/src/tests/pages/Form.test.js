@@ -31,7 +31,7 @@ describe('Renderiza a pagina raiz', () => {
     expect(screen.getByRole('option', { name: 'Agora!!' })).toBeInTheDocument();
   });
 
-  it('verificando se o tem uma tag textare a quarta pergunta e um small que é um contador', () => {
+  it('verificando se o tem uma tag textare, a quarta pergunta e um small que é um contador', () => {
     renderWithRouter(<Form />);
     const quartaPergunta = screen.getByText('Por favor, justifique a sua resposta anterior');
     const contador = screen.getByTestId('contador');
