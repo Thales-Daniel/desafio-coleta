@@ -1,7 +1,8 @@
 # Boas vindas ao repositório Desafio-Coleta!
 
 
-Este repositório tem como objetivo criar um aplicação utilizando a [PokeApi](https://pokeapi.co/) como base para listar todos os pokemons existentes nela. Desde já, agradeço a visita!
+Este repositório tem como objetivo criar um aplicação Full-stack, onde sera criado um form com 4 perguntas, e depois de preenchido,
+sera enviado para uma API que verifica-ra os dados e te retornara os detalhes de todos os dados.
 
 <p>&nbsp</p>
 
@@ -41,7 +42,7 @@ copiar o que tem dentro do exemplo para ele.
 ~~~
 E para finalizar é necessario entrar novamente na pasta do back-end e do front-end e iniciar o projeto,
 
-Entre primeiramente na pasta do beck-end e digite no terminal e incie o projeto com o comando marcado abaixo.
+Entre primeiramente na pasta do beck-end  e incie o projeto com o comando marcado abaixo inserindo-o no terminal.
 
 Mantenha-o rodando e em outro terminal, entre na pasta do front-end e também rode o comando marcado abaixo
 ~~~
