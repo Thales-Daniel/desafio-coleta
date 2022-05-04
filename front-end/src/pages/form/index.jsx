@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Buttons from '../../components/buttons';
 import Select from '../../components/select';
-import TextArea from '../../components/textArea';
+import TextArea from '../../components/TextArea';
 import { StateContext } from '../../context/StateProvider';
 import enviaRespostas from '../../services/enviaPerguntas';
 import './style.css';
@@ -37,7 +37,7 @@ function Form() {
     if (!redireciona) {
       return undefined;
     }
-    return navigate('/customer');
+    return navigate('/detalhes');
   }, [verificaCampos, redireciona]);
 
   const verificaTodosCampos = Object.values(verificaCampos).some((item) => item === false);
@@ -48,7 +48,7 @@ function Form() {
       <Buttons />
       <Select />
       <TextArea />
-      <button type="submit" disabled={verificaTodosCampos} className="submitButton">Enviar</button>
+      <button type="submit" disabled={verificaTodosCampos} className="submitButton" data-testid="botaoSubmit">Enviar</button>
     </form>
   );
 }

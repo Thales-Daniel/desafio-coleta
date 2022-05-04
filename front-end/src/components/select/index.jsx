@@ -18,6 +18,7 @@ function Select() {
           }}
           id="respostasSelect"
           defaultValue="default"
+          data-testid="select"
         >
           <option value="default" id="default" disabled>Selecione</option>
           <option>Sim</option>

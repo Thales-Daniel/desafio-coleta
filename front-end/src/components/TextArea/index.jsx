@@ -35,9 +35,10 @@ function TextArea() {
           minLength={15}
           maxLength={200}
           onChange={(e) => contador(e)}
+          data-testid="textArea"
         />
       </label>
-      <small className={tamanho >= 15 && tamanho <= 200 ? 'contador' : 'contadorRed'}>
+      <small className={tamanho >= 15 && tamanho <= 200 ? 'contador' : 'contadorRed'} data-testid="contador">
         {tamanho}
         /200
       </small>

@@ -22,6 +22,7 @@ function Buttons() {
             setCampos((prevState) => ({ ...prevState, Pergunta1: 'Sim' }));
             setVerificaCampos((prevState) => ({ ...prevState, Pergunta1: true }));
           }}
+          data-testid="primeiroBotaoSim"
         >
           Sim
 
@@ -33,6 +34,7 @@ function Buttons() {
             setCampos((prevState) => ({ ...prevState, Pergunta1: 'Não' }));
             setVerificaCampos((prevState) => ({ ...prevState, Pergunta1: true }));
           }}
+          data-testid="primeiroBotaoNao"
         >
           Não
 
@@ -49,6 +51,7 @@ function Buttons() {
             setCampos((prevState) => ({ ...prevState, Pergunta2: 'Sim' }));
             setVerificaCampos((prevState) => ({ ...prevState, Pergunta2: true }));
           }}
+          data-testid="segundoBotaoSim"
         >
           Sim
 
@@ -60,6 +63,7 @@ function Buttons() {
             setCampos((prevState) => ({ ...prevState, Pergunta2: 'Não' }));
             setVerificaCampos((prevState) => ({ ...prevState, Pergunta2: true }));
           }}
+          data-testid="segundoBotaoNao"
         >
           Não
         </button>
