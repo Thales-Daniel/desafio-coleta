@@ -28,12 +28,16 @@ cd desafio-coleta
 ~~~
 Logo em seguida, entre na pasta do front-end e instale as dependecias
 ~~~
-cd front-end/ 
+cd front-end/
+~~~
+~~~
 npm install
 ~~~
 Faça a mesma coisa para pasta de back-end, caso esteja na pasta desafio-coleta, digite: 
 ~~~
-cd back-end
+cd back-end/
+~~~
+~~~
 npm install
 ~~~
 É necessario também renomear o arquivo .envExample para .env
