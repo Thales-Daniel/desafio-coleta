@@ -32,13 +32,12 @@ function TextArea() {
         <textarea
           id="textarea"
           placeholder="Digite sua resposta aqui"
-          // className={Pergunta4 < 15 ? 'minimun' : 'maximun'}
           minLength={15}
           maxLength={200}
           onChange={(e) => contador(e)}
         />
       </label>
-      <small className="contador">
+      <small className={tamanho >= 15 && tamanho <= 200 ? 'contador' : 'contadorRed'}>
         {tamanho}
         /200
       </small>

@@ -26,3 +26,11 @@
   justify-self: center;
   margin-left: 32px;
 }
+
+.contadorRed {
+  color: rgba(247, 68, 68, 0.918);
+  display: flex;
+  align-self: flex-start;
+  justify-self: center;
+  margin-left: 32px;
+}
