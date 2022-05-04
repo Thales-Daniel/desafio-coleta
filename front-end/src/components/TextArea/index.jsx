@@ -32,8 +32,6 @@ function TextArea() {
         <textarea
           id="textarea"
           placeholder="Digite sua resposta aqui"
-          minLength={15}
-          maxLength={200}
           onChange={(e) => contador(e)}
           data-testid="textArea"
         />
