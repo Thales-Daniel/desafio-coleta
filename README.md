@@ -118,12 +118,16 @@ Proximos passos
 
 # Testes
 
+  <strong>Front-end</strong>
+  
 Foram desenvolvidos testes para o fron-end com o react-testing-library e jest, a cobertura total ficou em um pouco mais de 80%
 
 ![Captura de tela de 2022-05-04 15-15-36](https://user-images.githubusercontent.com/82240828/166800011-6d2a8ba3-2113-41db-929a-8f98af5a349c.png)
 
 
-<strong>Os testes do back-end se encontram em desenvolvimento<strong>
+   <strong>Back-end</strong>
+
+<strong>Os testes do back-end se encontram em desenvolvimento</strong>
 
 
 # Desafio Principal
@@ -132,3 +136,9 @@ O principal desafio do projeto foi organizar por onde seria iniciado a produçã
 causou um atraso grande.
 
 <p>&nbsp</p>
+
+
+# Proximos passos
+
+O proximo passo seria dar prosseguimento aos testes do back-end e alem disso
+criar novas rotas para dar novas features ao projeto.
